@@ -1,0 +1,15 @@
+<h2>Хранилище</h2>
+
+
+{% if items %}
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.item_name }}</strong>: {{ item.description }} <br>
+                Дата добавления: {{ item.created_at }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>У вас пока нет элементов в хранилище.</p>
+{% endif %}

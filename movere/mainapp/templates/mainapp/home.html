@@ -1,0 +1,14 @@
+<h1>Добро пожаловать!</h1>
+
+
+{% if is_manager  %}
+    <button onclick="location.href='{% url 'manager_dashboard' %}'">Панель менеджера</button>
+{% endif %}
+
+
+<button onclick="location.href='{% url 'make_order' %}'">Сделать заказ</button>
+<button onclick="location.href='{% url 'view_orders' %}'">Посмотреть заказы</button>
+<button onclick="location.href='{% url 'storage' %}'">Открыть хранилище</button>
+<button onclick="location.href='{% url 'profile' %}'">Открыть профиль</button>
+
+<button onclick="location.href='{% url 'logout' %}'">Выйти</button>
